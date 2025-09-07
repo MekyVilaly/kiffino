@@ -149,6 +149,13 @@
     "48263d1a-f37b-4715-893a-ac5dfd296a1a": {
       "type": "collection-list",
       "blocks": {
+        "template--16567751082231__48263d1a-f37b-4715-893a-ac5dfd296a1a-1666406556386d69e7-3": {
+          "type": "collection_item",
+          "settings": {
+            "title_collection": "Classic Watches",
+            "collection": "classic-watches"
+          }
+        },
         "template--16567751082231__48263d1a-f37b-4715-893a-ac5dfd296a1a-1666406556386d69e7-0": {
           "type": "collection_item",
           "settings": {
@@ -161,13 +168,6 @@
           "settings": {
             "title_collection": "Smart Watches",
             "collection": "smart-watches"
-          }
-        },
-        "template--16567751082231__48263d1a-f37b-4715-893a-ac5dfd296a1a-1666406556386d69e7-3": {
-          "type": "collection_item",
-          "settings": {
-            "title_collection": "Classic Watches",
-            "collection": "classic-watches"
           }
         },
         "8a228e2c-5d12-47a1-b600-b894788ac8d3": {
@@ -186,9 +186,9 @@
         }
       },
       "block_order": [
+        "template--16567751082231__48263d1a-f37b-4715-893a-ac5dfd296a1a-1666406556386d69e7-3",
         "template--16567751082231__48263d1a-f37b-4715-893a-ac5dfd296a1a-1666406556386d69e7-0",
         "template--16567751082231__48263d1a-f37b-4715-893a-ac5dfd296a1a-1666406556386d69e7-1",
-        "template--16567751082231__48263d1a-f37b-4715-893a-ac5dfd296a1a-1666406556386d69e7-3",
         "8a228e2c-5d12-47a1-b600-b894788ac8d3",
         "28f56b4f-d749-41ba-b1c4-4d42d4eb617b"
       ],
@@ -421,36 +421,6 @@
         "reset_spacing": false
       }
     },
-    "c2acfe69-d34b-4b82-810a-ff7706aa1054": {
-      "type": "blog-posts",
-      "settings": {
-        "heading": "THE BLOG",
-        "description": "<p>Here’s some of our most popular products people are in love with.</p>",
-        "text_align": "text-center",
-        "container": "container-fluid",
-        "background_color": "",
-        "blog": "",
-        "num_post_show": 4,
-        "post_item_desktop": 3,
-        "column_gap": 30,
-        "autoplay": false,
-        "loop": false,
-        "show_arrow": true,
-        "show_bullet": false,
-        "show_bullet_mobile": false,
-        "aspect_ratio": "original",
-        "custom_ratio": "21:9",
-        "hover_effect": "zoom",
-        "post_show_author": true,
-        "post_show_category": true,
-        "post_show_date": true,
-        "post_show_excerpt": true,
-        "post_show_button": false,
-        "padding_top": 0,
-        "padding_bottom": 0,
-        "reset_spacing": false
-      }
-    },
     "2368aaf9-b549-4368-b7a4-57b31db8a7d2": {
       "type": "icon-box",
       "blocks": {
@@ -509,7 +479,6 @@
     "21a6964c-2ef9-44f3-acfc-9f63ce6fa037",
     "2d159cb3-fa47-4a3b-abb2-63db485890cd",
     "978b3ec8-486d-4f4a-9558-b2cbc5044983",
-    "c2acfe69-d34b-4b82-810a-ff7706aa1054",
     "2368aaf9-b549-4368-b7a4-57b31db8a7d2"
   ]
 }
