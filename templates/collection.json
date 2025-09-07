@@ -44,60 +44,44 @@
           "type": "collection_item",
           "settings": {
             "title_collection": "Luxury Watches",
-            "collection": ""
+            "collection": "luxury-watches"
           }
         },
         "template--16567751475447__8498460c-0376-40d1-bafc-199edbe0edfc-16665857567f9937b1-1": {
           "type": "collection_item",
           "settings": {
             "title_collection": "Smart Watches",
-            "collection": ""
-          }
-        },
-        "template--16567751475447__8498460c-0376-40d1-bafc-199edbe0edfc-16665857567f9937b1-2": {
-          "type": "collection_item",
-          "settings": {
-            "title_collection": "Sports Watches",
-            "collection": ""
+            "collection": "smart-watches"
           }
         },
         "template--16567751475447__8498460c-0376-40d1-bafc-199edbe0edfc-16665857567f9937b1-3": {
           "type": "collection_item",
           "settings": {
             "title_collection": "Classic Watches",
-            "collection": ""
+            "collection": "classic-watches"
           }
         },
         "616f3472-abe6-41ef-8d49-4e190d1fc5cc": {
           "type": "collection_item",
           "settings": {
             "title_collection": "Vintage Watches",
-            "collection": ""
+            "collection": "vintage-watches-1"
           }
         },
         "36a53b4a-830c-4660-a410-d73343bf9d7d": {
           "type": "collection_item",
           "settings": {
             "title_collection": "Diving Watches",
-            "collection": ""
-          }
-        },
-        "f2fc114d-493a-4996-a5d3-680228e6a3f0": {
-          "type": "collection_item",
-          "settings": {
-            "title_collection": "New Arrivals",
-            "collection": ""
+            "collection": "diving-watches"
           }
         }
       },
       "block_order": [
         "template--16567751475447__8498460c-0376-40d1-bafc-199edbe0edfc-16665857567f9937b1-0",
         "template--16567751475447__8498460c-0376-40d1-bafc-199edbe0edfc-16665857567f9937b1-1",
-        "template--16567751475447__8498460c-0376-40d1-bafc-199edbe0edfc-16665857567f9937b1-2",
         "template--16567751475447__8498460c-0376-40d1-bafc-199edbe0edfc-16665857567f9937b1-3",
         "616f3472-abe6-41ef-8d49-4e190d1fc5cc",
-        "36a53b4a-830c-4660-a410-d73343bf9d7d",
-        "f2fc114d-493a-4996-a5d3-680228e6a3f0"
+        "36a53b4a-830c-4660-a410-d73343bf9d7d"
       ],
       "settings": {
         "heading": "WATCH COLLECTIONS",
@@ -152,13 +136,14 @@
           "type": "popular_product",
           "settings": {
             "title": "Featured Watches",
-            "collection": "",
+            "collection": "classic-watches",
             "type_product": "list",
             "maximum": 3
           }
         },
         "8fe431f8-91f7-4b21-a605-4b55df7293e1": {
           "type": "image_banner",
+          "disabled": true,
           "settings": {
             "url": "",
             "open_link": false
