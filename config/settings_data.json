@@ -342,26 +342,6 @@
               "col": "4"
             }
           },
-          "ffec3a6d-dc40-4cb3-8117-a17be820fde9": {
-            "type": "link",
-            "settings": {
-              "title": "",
-              "url": "shopify://collections/classic-watches",
-              "open_link": false,
-              "menu": "",
-              "col": "3"
-            }
-          },
-          "4e569da7-b3ef-4dec-81d3-703cb45b6fec": {
-            "type": "link",
-            "settings": {
-              "title": "",
-              "url": "",
-              "open_link": false,
-              "menu": "",
-              "col": "3"
-            }
-          },
           "0bd9c491-364c-43fe-b0f1-08aff9ab6378": {
             "type": "collection",
             "settings": {
@@ -457,8 +437,6 @@
           "single_link_VRYiRB",
           "81fceee0-ca53-44a4-89ac-51ed3f3907eb",
           "products_kQgYWn",
-          "ffec3a6d-dc40-4cb3-8117-a17be820fde9",
-          "4e569da7-b3ef-4dec-81d3-703cb45b6fec",
           "0bd9c491-364c-43fe-b0f1-08aff9ab6378",
           "0e3c97d7-319c-47f8-b5fa-cf20d55ff0c3",
           "c4f1d4e1-02cb-41d5-af80-61dcd17a82e9",
