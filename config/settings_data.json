@@ -332,8 +332,25 @@
               "background_size": "auto"
             }
           },
+          "banner_p7qGDH": {
+            "type": "banner",
+            "settings": {
+              "title": "Heading",
+              "description": "Description",
+              "heading_text_align": "text-left",
+              "column_reverse": false,
+              "box_shadow": false,
+              "button_title": "",
+              "banner_link": "",
+              "open_link": false,
+              "overlap_top": false,
+              "space_banner": 0,
+              "col": "4"
+            }
+          },
           "products_kQgYWn": {
             "type": "products",
+            "disabled": true,
             "settings": {
               "title": "Product",
               "collection": "classic-watches",
@@ -362,6 +379,7 @@
         "block_order": [
           "single_link_VRYiRB",
           "81fceee0-ca53-44a4-89ac-51ed3f3907eb",
+          "banner_p7qGDH",
           "products_kQgYWn",
           "c4f1d4e1-02cb-41d5-af80-61dcd17a82e9"
         ],
