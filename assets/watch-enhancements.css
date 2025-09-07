@@ -1,0 +1,366 @@
+/* Watch Store Product Enhancements */
+
+/* Watch-specific product styling */
+.watch-product-card {
+  position: relative;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.watch-product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Watch image container */
+.watch-image-container {
+  position: relative;
+  padding: 20px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  border-radius: 12px 12px 0 0;
+  overflow: hidden;
+}
+
+.watch-image-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at center, rgba(255,255,255,0.8) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* Watch product image */
+.watch-product-image {
+  position: relative;
+  z-index: 2;
+  transition: transform 0.4s ease;
+}
+
+.watch-product-card:hover .watch-product-image {
+  transform: scale(1.05);
+}
+
+/* Watch brand/vendor styling */
+.watch-brand {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+/* Watch model name */
+.watch-model {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  line-height: 1.3;
+  margin-bottom: 12px;
+}
+
+/* Watch price styling */
+.watch-price {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 15px;
+}
+
+.watch-price .compare-price {
+  font-size: 1.4rem;
+  color: #999;
+  text-decoration: line-through;
+  margin-left: 8px;
+  font-weight: 400;
+}
+
+/* Watch features/tags */
+.watch-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 15px;
+}
+
+.watch-feature-tag {
+  background: #f0f0f0;
+  color: #666;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.watch-feature-tag.luxury {
+  background: linear-gradient(135deg, #d4af37, #ffd700);
+  color: #1a1a1a;
+}
+
+.watch-feature-tag.smart {
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: white;
+}
+
+.watch-feature-tag.sport {
+  background: linear-gradient(135deg, #28a745, #1e7e34);
+  color: white;
+}
+
+.watch-feature-tag.vintage {
+  background: linear-gradient(135deg, #6c757d, #495057);
+  color: white;
+}
+
+/* Watch action buttons */
+.watch-actions {
+  display: flex;
+  gap: 10px;
+  padding: 15px 20px;
+  background: #f8f9fa;
+  border-radius: 0 0 12px 12px;
+}
+
+.watch-action-btn {
+  flex: 1;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.watch-action-btn.primary {
+  background: linear-gradient(135deg, #1a1a1a, #333);
+  color: white;
+}
+
+.watch-action-btn.primary:hover {
+  background: linear-gradient(135deg, #333, #555);
+  transform: translateY(-2px);
+}
+
+.watch-action-btn.secondary {
+  background: white;
+  color: #1a1a1a;
+  border: 2px solid #e0e0e0;
+}
+
+.watch-action-btn.secondary:hover {
+  border-color: #1a1a1a;
+  background: #1a1a1a;
+  color: white;
+}
+
+/* Watch collection badges */
+.watch-collection-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  z-index: 3;
+}
+
+.watch-collection-badge.luxury {
+  background: linear-gradient(135deg, #d4af37, #ffd700);
+  color: #1a1a1a;
+}
+
+.watch-collection-badge.smart {
+  background: linear-gradient(135deg, #007bff, #0056b3);
+}
+
+.watch-collection-badge.sport {
+  background: linear-gradient(135deg, #28a745, #1e7e34);
+}
+
+/* Watch grid layout enhancements */
+.watch-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  padding: 20px 0;
+}
+
+@media (min-width: 768px) {
+  .watch-grid {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .watch-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Watch product hover effects */
+.watch-product-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(26,26,26,0.05) 0%, transparent 50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.watch-product-card:hover::before {
+  opacity: 1;
+}
+
+/* Watch quick view modal enhancements */
+.watch-quick-view {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+.watch-quick-view .watch-image-container {
+  padding: 30px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+}
+
+/* Watch collection page styling */
+.watch-collection-header {
+  text-align: center;
+  padding: 60px 0 40px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+}
+
+.watch-collection-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.watch-collection-description {
+  font-size: 1.6rem;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Watch filter enhancements */
+.watch-filters {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  margin-bottom: 30px;
+}
+
+.watch-filter-group {
+  margin-bottom: 20px;
+}
+
+.watch-filter-label {
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.watch-filter-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.watch-filter-option {
+  padding: 8px 16px;
+  background: #f0f0f0;
+  color: #666;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.watch-filter-option:hover,
+.watch-filter-option.active {
+  background: #1a1a1a;
+  color: white;
+}
+
+/* Watch loading states */
+.watch-skeleton {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+  border-radius: 12px;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.watch-skeleton-image {
+  height: 250px;
+  margin-bottom: 20px;
+}
+
+.watch-skeleton-text {
+  height: 20px;
+  margin-bottom: 10px;
+}
+
+.watch-skeleton-text.short {
+  width: 60%;
+}
+
+.watch-skeleton-text.medium {
+  width: 80%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+  .watch-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .watch-collection-title {
+    font-size: 2.5rem;
+  }
+  
+  .watch-actions {
+    flex-direction: column;
+  }
+  
+  .watch-action-btn {
+    width: 100%;
+  }
+}

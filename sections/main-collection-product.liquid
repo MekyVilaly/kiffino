@@ -160,17 +160,15 @@
                 <div
                   id="bls__product-grid"
                   data-id="{{ section.id }}"
-                  class="{% if view == 'list' %}list product-list{% else %}grid product-grid {{ product_style }}{% endif %} container-products-switch bls__grid row row-cols-2 row-cols-lg-{{ products_column }}"
+                  class="{% if view == 'list' %}list product-list{% else %}watch-grid{% endif %} container-products-switch"
                   data-view-mode="{{ products_column }}"
                 >
                   {%- for product in collection.products -%}
-                    <div
-                      class="bls__grid__item"
-                    >
+                    <div class="watch-grid-item">
                       {%- if view == 'list' -%}
                         {%- render 'product-list-item', product: product -%}
                       {%- else -%}
-                        {%- render 'product-item', product: product -%}
+                        {%- render 'watch-product-item', product: product -%}
                       {%- endif -%}
                     </div>
                   {%- endfor -%}

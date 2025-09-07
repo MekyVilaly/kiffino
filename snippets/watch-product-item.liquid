@@ -1,0 +1,200 @@
+{%- liquid
+  assign sold_out = false
+  assign th_st = settings
+  assign option_name = "Color"
+  if th_st.option_name_color != blank
+    assign option_name = th_st.option_name_color
+  endif
+  
+  assign show_quick_view = th_st.show_quick_view
+  assign show_add_to_cart = th_st.show_add_to_cart
+  assign show_wishlist = th_st.show_wishlist
+  assign show_compare = th_st.show_compare
+  assign show_review = th_st.show_review
+  assign show_product_type = th_st.show_product_type
+  assign enable_hover_image = th_st.enable_hover_image
+  
+  assign compare_at_price = product.compare_at_price
+  assign price = product.price
+  assign sale = false
+  if compare_at_price > price and compare_at_price != blank
+    assign sale = true
+  endif
+  
+  assign product_avail = false
+  assign product_qty = 0
+  assign pre_order = false
+  
+  for variant in product.variants
+    if variant.inventory_quantity > 0
+      assign product_qty = product_qty | plus: variant.inventory_quantity
+    endif
+    if variant.available == true
+      assign product_avail = true
+    endif
+  endfor
+  
+  if product_qty < 1 and product_avail == false
+    assign sold_out = true
+  endif
+  
+  # Calculate discount percentage
+  assign discount_percentage = 0
+  if compare_at_price > price and compare_at_price != blank
+    assign discount_percentage = compare_at_price | minus: price | times: 100 | divided_by: compare_at_price
+  endif
+  
+  # Determine watch collection type based on tags
+  assign watch_collection = 'classic'
+  if product.tags contains 'luxury' or product.tags contains 'gold' or product.tags contains 'diamond'
+    assign watch_collection = 'luxury'
+  elsif product.tags contains 'smart' or product.tags contains 'fitness' or product.tags contains 'bluetooth'
+    assign watch_collection = 'smart'
+  elsif product.tags contains 'sport' or product.tags contains 'athletic' or product.tags contains 'waterproof'
+    assign watch_collection = 'sport'
+  elsif product.tags contains 'vintage' or product.tags contains 'retro' or product.tags contains 'classic'
+    assign watch_collection = 'vintage'
+  elsif product.tags contains 'diving' or product.tags contains 'professional'
+    assign watch_collection = 'diving'
+  endif
+-%}
+
+<div class="watch-product-card" data-product-handle="{{ product.handle }}">
+  <!-- Collection Badge -->
+  <div class="watch-collection-badge {{ watch_collection }}">
+    {{ watch_collection | capitalize }}
+  </div>
+  
+  <!-- Product Image Container -->
+  <div class="watch-image-container">
+    <a class="watch-product-image" href="{{ product.url | within: collection }}">
+      {%- if product.featured_image != blank -%}
+        {%- render 'responsive-image' | image: product.featured_image | type: 'product' | cls: 'bls__product-grid bls__product-img-sw' -%}
+      {%- else -%}
+        {%- render 'responsive-image' | type: 'product' | cls: 'bls__product-grid-plh' -%}
+      {%- endif -%}
+    </a>
+    
+    <!-- Sale Badge -->
+    {%- if sale and discount_percentage > 0 -%}
+      <div class="bls__product-label">
+        <div class="bls__sale-label">-{{ discount_percentage }}%</div>
+      </div>
+    {%- endif -%}
+    
+    <!-- Sold Out Badge -->
+    {%- if sold_out -%}
+      <div class="bls__product-label">
+        <div class="bls__sold-out-label">Sold Out</div>
+      </div>
+    {%- endif -%}
+  </div>
+  
+  <!-- Product Details -->
+  <div class="watch-product-details" style="padding: 20px;">
+    <!-- Brand/Vendor -->
+    {%- if product.vendor != blank -%}
+      <div class="watch-brand">{{ product.vendor }}</div>
+    {%- endif -%}
+    
+    <!-- Product Title -->
+    <h3 class="watch-model">
+      <a href="{{ product.url | within: collection }}" style="color: inherit; text-decoration: none;">
+        {{ product.title }}
+      </a>
+    </h3>
+    
+    <!-- Watch Features/Tags -->
+    {%- if product.tags.size > 0 -%}
+      <div class="watch-features">
+        {%- for tag in product.tags limit: 3 -%}
+          {%- assign tag_class = 'watch-feature-tag' -%}
+          {%- if tag contains 'luxury' or tag contains 'gold' or tag contains 'diamond' -%}
+            {%- assign tag_class = 'watch-feature-tag luxury' -%}
+          {%- elsif tag contains 'smart' or tag contains 'fitness' or tag contains 'bluetooth' -%}
+            {%- assign tag_class = 'watch-feature-tag smart' -%}
+          {%- elsif tag contains 'sport' or tag contains 'athletic' or tag contains 'waterproof' -%}
+            {%- assign tag_class = 'watch-feature-tag sport' -%}
+          {%- elsif tag contains 'vintage' or tag contains 'retro' -%}
+            {%- assign tag_class = 'watch-feature-tag vintage' -%}
+          {%- endif -%}
+          <span class="{{ tag_class }}">{{ tag | capitalize }}</span>
+        {%- endfor -%}
+      </div>
+    {%- endif -%}
+    
+    <!-- Price -->
+    <div class="watch-price">
+      {%- if sale -%}
+        <span class="special-price">{{ price | money }}</span>
+        <span class="compare-price">{{ compare_at_price | money }}</span>
+      {%- else -%}
+        {{ price | money }}
+      {%- endif -%}
+    </div>
+    
+    <!-- Product Reviews -->
+    {%- if show_review and product.metafields.reviews.rating.value != blank -%}
+      <div class="watch-reviews" style="margin-bottom: 15px;">
+        <div class="spr-badge" data-product-id="{{ product.id }}">
+          <span class="spr-badge-starrating">
+            {%- assign rating = product.metafields.reviews.rating.value -%}
+            {%- for i in (1..5) -%}
+              {%- if i <= rating -%}
+                <span class="spr-icon spr-icon-star"></span>
+              {%- else -%}
+                <span class="spr-icon spr-icon-star-empty"></span>
+              {%- endif -%}
+            {%- endfor -%}
+          </span>
+        </div>
+      </div>
+    {%- endif -%}
+  </div>
+  
+  <!-- Action Buttons -->
+  <div class="watch-actions">
+    {%- if show_add_to_cart -%}
+      <button class="watch-action-btn primary" onclick="addToCart('{{ product.selected_or_first_available_variant.id }}')">
+        Add to Cart
+      </button>
+    {%- endif -%}
+    
+    {%- if show_quick_view -%}
+      <button class="watch-action-btn secondary" onclick="quickView('{{ product.handle }}')">
+        Quick View
+      </button>
+    {%- endif -%}
+  </div>
+</div>
+
+<script>
+function addToCart(variantId) {
+  fetch('/cart/add.js', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      id: variantId,
+      quantity: 1
+    })
+  })
+  .then(response => response.json())
+  .then(data => {
+    // Show success message or update cart
+    console.log('Added to cart:', data);
+    // You can add cart notification here
+  })
+  .catch(error => {
+    console.error('Error:', error);
+  });
+}
+
+function quickView(productHandle) {
+  // Implement quick view functionality
+  console.log('Quick view for:', productHandle);
+  // You can open a modal or redirect to product page
+  window.location.href = '/products/' + productHandle;
+}
+</script>

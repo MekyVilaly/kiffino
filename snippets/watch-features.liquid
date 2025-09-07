@@ -1,0 +1,181 @@
+{%- liquid
+  assign watch_features = product.metafields.custom.watch_features.value
+  assign movement_type = product.metafields.custom.movement_type.value
+  assign water_resistance = product.metafields.custom.water_resistance.value
+  assign case_material = product.metafields.custom.case_material.value
+  assign strap_material = product.metafields.custom.strap_material.value
+  assign crystal_type = product.metafields.custom.crystal_type.value
+  assign power_reserve = product.metafields.custom.power_reserve.value
+  assign warranty = product.metafields.custom.warranty.value
+-%}
+
+{%- if watch_features or movement_type or water_resistance or case_material or strap_material or crystal_type or power_reserve or warranty -%}
+<div class="watch-features-section" style="margin: 40px 0; padding: 30px; background: #f8f9fa; border-radius: 12px;">
+  <h3 class="watch-features-title" style="font-size: 2.4rem; font-weight: 700; color: #1a1a1a; margin-bottom: 30px; text-align: center;">
+    Watch Specifications
+  </h3>
+  
+  <div class="watch-features-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+    
+    {%- if movement_type -%}
+    <div class="watch-feature-item" style="background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+      <div class="feature-icon" style="width: 40px; height: 40px; background: linear-gradient(135deg, #007bff, #0056b3); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 15px;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+        </svg>
+      </div>
+      <h4 style="font-size: 1.6rem; font-weight: 600; color: #1a1a1a; margin-bottom: 8px;">Movement</h4>
+      <p style="color: #666; font-size: 1.4rem;">{{ movement_type }}</p>
+    </div>
+    {%- endif -%}
+    
+    {%- if water_resistance -%}
+    <div class="watch-feature-item" style="background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+      <div class="feature-icon" style="width: 40px; height: 40px; background: linear-gradient(135deg, #28a745, #1e7e34); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 15px;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+        </svg>
+      </div>
+      <h4 style="font-size: 1.6rem; font-weight: 600; color: #1a1a1a; margin-bottom: 8px;">Water Resistance</h4>
+      <p style="color: #666; font-size: 1.4rem;">{{ water_resistance }}</p>
+    </div>
+    {%- endif -%}
+    
+    {%- if case_material -%}
+    <div class="watch-feature-item" style="background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+      <div class="feature-icon" style="width: 40px; height: 40px; background: linear-gradient(135deg, #6c757d, #495057); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 15px;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+        </svg>
+      </div>
+      <h4 style="font-size: 1.6rem; font-weight: 600; color: #1a1a1a; margin-bottom: 8px;">Case Material</h4>
+      <p style="color: #666; font-size: 1.4rem;">{{ case_material }}</p>
+    </div>
+    {%- endif -%}
+    
+    {%- if strap_material -%}
+    <div class="watch-feature-item" style="background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+      <div class="feature-icon" style="width: 40px; height: 40px; background: linear-gradient(135deg, #d4af37, #ffd700); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 15px;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+        </svg>
+      </div>
+      <h4 style="font-size: 1.6rem; font-weight: 600; color: #1a1a1a; margin-bottom: 8px;">Strap Material</h4>
+      <p style="color: #666; font-size: 1.4rem;">{{ strap_material }}</p>
+    </div>
+    {%- endif -%}
+    
+    {%- if crystal_type -%}
+    <div class="watch-feature-item" style="background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+      <div class="feature-icon" style="width: 40px; height: 40px; background: linear-gradient(135deg, #17a2b8, #138496); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 15px;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+        </svg>
+      </div>
+      <h4 style="font-size: 1.6rem; font-weight: 600; color: #1a1a1a; margin-bottom: 8px;">Crystal</h4>
+      <p style="color: #666; font-size: 1.4rem;">{{ crystal_type }}</p>
+    </div>
+    {%- endif -%}
+    
+    {%- if power_reserve -%}
+    <div class="watch-feature-item" style="background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+      <div class="feature-icon" style="width: 40px; height: 40px; background: linear-gradient(135deg, #fd7e14, #e55a00); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 15px;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+        </svg>
+      </div>
+      <h4 style="font-size: 1.6rem; font-weight: 600; color: #1a1a1a; margin-bottom: 8px;">Power Reserve</h4>
+      <p style="color: #666; font-size: 1.4rem;">{{ power_reserve }}</p>
+    </div>
+    {%- endif -%}
+    
+    {%- if warranty -%}
+    <div class="watch-feature-item" style="background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+      <div class="feature-icon" style="width: 40px; height: 40px; background: linear-gradient(135deg, #dc3545, #c82333); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 15px;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+        </svg>
+      </div>
+      <h4 style="font-size: 1.6rem; font-weight: 600; color: #1a1a1a; margin-bottom: 8px;">Warranty</h4>
+      <p style="color: #666; font-size: 1.4rem;">{{ warranty }}</p>
+    </div>
+    {%- endif -%}
+    
+    {%- if watch_features -%}
+    <div class="watch-feature-item" style="background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+      <div class="feature-icon" style="width: 40px; height: 40px; background: linear-gradient(135deg, #6f42c1, #5a32a3); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 15px;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+        </svg>
+      </div>
+      <h4 style="font-size: 1.6rem; font-weight: 600; color: #1a1a1a; margin-bottom: 8px;">Additional Features</h4>
+      <p style="color: #666; font-size: 1.4rem;">{{ watch_features }}</p>
+    </div>
+    {%- endif -%}
+  </div>
+  
+  <!-- Default features based on product tags -->
+  {%- unless watch_features or movement_type or water_resistance or case_material or strap_material or crystal_type or power_reserve or warranty -%}
+    <div class="watch-features-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+      
+      {%- if product.tags contains 'waterproof' or product.tags contains 'water-resistant' -%}
+      <div class="watch-feature-item" style="background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+        <div class="feature-icon" style="width: 40px; height: 40px; background: linear-gradient(135deg, #28a745, #1e7e34); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 15px;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+          </svg>
+        </div>
+        <h4 style="font-size: 1.6rem; font-weight: 600; color: #1a1a1a; margin-bottom: 8px;">Water Resistance</h4>
+        <p style="color: #666; font-size: 1.4rem;">Suitable for swimming and water activities</p>
+      </div>
+      {%- endif -%}
+      
+      {%- if product.tags contains 'swiss' or product.tags contains 'automatic' -%}
+      <div class="watch-feature-item" style="background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+        <div class="feature-icon" style="width: 40px; height: 40px; background: linear-gradient(135deg, #007bff, #0056b3); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 15px;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+          </svg>
+        </div>
+        <h4 style="font-size: 1.6rem; font-weight: 600; color: #1a1a1a; margin-bottom: 8px;">Movement</h4>
+        <p style="color: #666; font-size: 1.4rem;">Swiss precision automatic movement</p>
+      </div>
+      {%- endif -%}
+      
+      {%- if product.tags contains 'leather' -%}
+      <div class="watch-feature-item" style="background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+        <div class="feature-icon" style="width: 40px; height: 40px; background: linear-gradient(135deg, #d4af37, #ffd700); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 15px;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+          </svg>
+        </div>
+        <h4 style="font-size: 1.6rem; font-weight: 600; color: #1a1a1a; margin-bottom: 8px;">Strap Material</h4>
+        <p style="color: #666; font-size: 1.4rem;">Genuine leather strap</p>
+      </div>
+      {%- endif -%}
+      
+      {%- if product.tags contains 'sapphire' -%}
+      <div class="watch-feature-item" style="background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+        <div class="feature-icon" style="width: 40px; height: 40px; background: linear-gradient(135deg, #17a2b8, #138496); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 15px;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+          </svg>
+        </div>
+        <h4 style="font-size: 1.6rem; font-weight: 600; color: #1a1a1a; margin-bottom: 8px;">Crystal</h4>
+        <p style="color: #666; font-size: 1.4rem;">Sapphire crystal for superior scratch resistance</p>
+      </div>
+      {%- endif -%}
+      
+      <div class="watch-feature-item" style="background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+        <div class="feature-icon" style="width: 40px; height: 40px; background: linear-gradient(135deg, #dc3545, #c82333); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 15px;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+          </svg>
+        </div>
+        <h4 style="font-size: 1.6rem; font-weight: 600; color: #1a1a1a; margin-bottom: 8px;">Warranty</h4>
+        <p style="color: #666; font-size: 1.4rem;">2-year international warranty</p>
+      </div>
+    </div>
+  {%- endunless -%}
+</div>
+{%- endif -%}

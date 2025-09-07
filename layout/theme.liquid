@@ -26,6 +26,7 @@
       }
     </script>
     {%- render 'head-assets' -%}
+    {{ 'watch-enhancements.css' | asset_url | stylesheet_tag }}
   </head>
   <body class="{% if template.name == 'collection' %}template-collection{% endif %}{% if template.name == 'product' %}template-product {% endif %}{% if template.name == 'index' %}template-index{% endif %} {%- if settings.general_layout == 'boxed' -%}box-layout{% elsif settings.general_layout == 'full_width' %}full-width-layout{% else %}{%- endif -%} {% if settings.content_center %}item-center{% endif %} product-images-style-{{ settings.product_images_style }}">
     <div class="bls-wrapper">
