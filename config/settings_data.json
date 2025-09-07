@@ -305,20 +305,15 @@
       "horizontal-menu": {
         "type": "horizontal-menu",
         "blocks": {
-          "c5b2b061-67e7-4cbb-8714-2c1ee8348b5b": {
-            "type": "menu_item",
+          "single_link_VRYiRB": {
+            "type": "single_link",
             "settings": {
               "title": "Home",
-              "url": "shopify://pages/contact",
+              "url": "shopify://collections/frontpage",
               "open_link": false,
               "label": "",
               "icon_font": "",
-              "icon_width_image": 20,
-              "width": "full-width",
-              "custom_width": 1200,
-              "background_repeat": "no-repeat",
-              "background_position": "center",
-              "background_size": "auto"
+              "icon_width_image": 50
             }
           },
           "81fceee0-ca53-44a4-89ac-51ed3f3907eb": {
@@ -341,7 +336,7 @@
             "type": "link",
             "settings": {
               "title": "",
-              "url": "",
+              "url": "shopify://collections/classic-watches",
               "open_link": false,
               "menu": "",
               "col": "3"
@@ -446,34 +441,10 @@
               "space_banner": 0,
               "col": "4"
             }
-          },
-          "d165434f-e35f-4638-b915-3c7216d66674": {
-            "type": "dropdown",
-            "settings": {
-              "title": "Blog",
-              "url": "",
-              "menu": "",
-              "open_link": false,
-              "label": "",
-              "icon_font": "",
-              "icon_width_image": 50
-            }
-          },
-          "d7c29f4e-5b2d-4d1c-8190-e2ab7ea4596a": {
-            "type": "dropdown",
-            "settings": {
-              "title": "Page",
-              "url": "",
-              "menu": "",
-              "open_link": false,
-              "label": "",
-              "icon_font": "",
-              "icon_width_image": 50
-            }
           }
         },
         "block_order": [
-          "c5b2b061-67e7-4cbb-8714-2c1ee8348b5b",
+          "single_link_VRYiRB",
           "81fceee0-ca53-44a4-89ac-51ed3f3907eb",
           "ffec3a6d-dc40-4cb3-8117-a17be820fde9",
           "4e569da7-b3ef-4dec-81d3-703cb45b6fec",
@@ -484,9 +455,7 @@
           "882a36ca-717e-41e8-878f-4028268a7197",
           "10d68d71-2b8e-43b2-b14f-49c7da236e2d",
           "20ad44f0-ea33-4491-8fd2-8c87af447bf2",
-          "4f39245a-f834-4bfd-b0ba-e39b59ef6066",
-          "d165434f-e35f-4638-b915-3c7216d66674",
-          "d7c29f4e-5b2d-4d1c-8190-e2ab7ea4596a"
+          "4f39245a-f834-4bfd-b0ba-e39b59ef6066"
         ],
         "settings": {
           "m_animation": "up_to_down",
