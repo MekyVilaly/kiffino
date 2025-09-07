@@ -31,7 +31,7 @@
             "subheading": "2024 LUXURY COLLECTION",
             "title": "PRECISION TIMEPIECES",
             "description": "<p>Discover our exclusive collection of luxury watches crafted with Swiss precision and timeless elegance.</p>",
-            "image_link": "",
+            "image_link": "shopify://collections/luxury-watches",
             "button_text": "Shop Luxury Watches",
             "button_type": "primary"
           }
@@ -63,6 +63,8 @@
         "template--16567751082231__0c521c75-5d82-4dd6-aecc-f519d8907411-1666406556d8612fa9-1": {
           "type": "slider_item",
           "settings": {
+            "image": "shopify://shop_images/blackwatch.jpg",
+            "image_mobile": "shopify://shop_images/blackwatch.jpg",
             "content_box": "content_in_container_fullwidth",
             "content_custom_width": true,
             "content_width": 50,
@@ -77,7 +79,7 @@
             "subheading": "CLASSIC ELEGANCE",
             "title": "TIMELESS DESIGN",
             "description": "<p>From vintage-inspired pieces to modern minimalists, find the perfect watch to complement your personal style.</p>",
-            "image_link": "",
+            "image_link": "shopify://collections/classic-watches",
             "button_text": "View Collection",
             "button_type": "primary"
           }
@@ -119,8 +121,8 @@
         "text_alignment": "text-center",
         "container": "container-fluid",
         "product_carousel_background_color": "",
-        "collection": "",
-        "limit_products": 8,
+        "collection": "vintage-watches",
+        "limit_products": 7,
         "item_desktop": 4,
         "column_gap": 30,
         "carousel_autoplay": true,
@@ -151,49 +153,41 @@
           "type": "collection_item",
           "settings": {
             "title_collection": "Luxury Watches",
-            "collection": ""
+            "collection": "luxury-watches"
           }
         },
         "template--16567751082231__48263d1a-f37b-4715-893a-ac5dfd296a1a-1666406556386d69e7-1": {
           "type": "collection_item",
           "settings": {
             "title_collection": "Smart Watches",
-            "collection": ""
-          }
-        },
-        "template--16567751082231__48263d1a-f37b-4715-893a-ac5dfd296a1a-1666406556386d69e7-2": {
-          "type": "collection_item",
-          "settings": {
-            "title_collection": "Sports Watches",
-            "collection": ""
+            "collection": "smart-watches"
           }
         },
         "template--16567751082231__48263d1a-f37b-4715-893a-ac5dfd296a1a-1666406556386d69e7-3": {
           "type": "collection_item",
           "settings": {
             "title_collection": "Classic Watches",
-            "collection": ""
+            "collection": "classic-watches"
           }
         },
         "8a228e2c-5d12-47a1-b600-b894788ac8d3": {
           "type": "collection_item",
           "settings": {
             "title_collection": "Vintage Watches",
-            "collection": ""
+            "collection": "vintage-watches-1"
           }
         },
         "28f56b4f-d749-41ba-b1c4-4d42d4eb617b": {
           "type": "collection_item",
           "settings": {
             "title_collection": "Diving Watches",
-            "collection": ""
+            "collection": "diving-watches"
           }
         }
       },
       "block_order": [
         "template--16567751082231__48263d1a-f37b-4715-893a-ac5dfd296a1a-1666406556386d69e7-0",
         "template--16567751082231__48263d1a-f37b-4715-893a-ac5dfd296a1a-1666406556386d69e7-1",
-        "template--16567751082231__48263d1a-f37b-4715-893a-ac5dfd296a1a-1666406556386d69e7-2",
         "template--16567751082231__48263d1a-f37b-4715-893a-ac5dfd296a1a-1666406556386d69e7-3",
         "8a228e2c-5d12-47a1-b600-b894788ac8d3",
         "28f56b4f-d749-41ba-b1c4-4d42d4eb617b"
