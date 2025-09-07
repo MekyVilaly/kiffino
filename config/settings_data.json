@@ -357,74 +357,13 @@
               "background_position": "right center",
               "background_size": "auto 100%"
             }
-          },
-          "76c5199e-dddb-4f58-b371-802da213fda6": {
-            "type": "link",
-            "settings": {
-              "title": "",
-              "url": "",
-              "open_link": false,
-              "menu": "",
-              "col": "2"
-            }
-          },
-          "882a36ca-717e-41e8-878f-4028268a7197": {
-            "type": "link",
-            "settings": {
-              "title": "",
-              "url": "",
-              "open_link": false,
-              "menu": "",
-              "col": "2"
-            }
-          },
-          "10d68d71-2b8e-43b2-b14f-49c7da236e2d": {
-            "type": "link",
-            "settings": {
-              "title": "",
-              "url": "",
-              "open_link": false,
-              "menu": "",
-              "col": "2"
-            }
-          },
-          "20ad44f0-ea33-4491-8fd2-8c87af447bf2": {
-            "type": "link",
-            "settings": {
-              "title": "",
-              "url": "",
-              "open_link": false,
-              "menu": "",
-              "col": "2"
-            }
-          },
-          "4f39245a-f834-4bfd-b0ba-e39b59ef6066": {
-            "type": "banner",
-            "settings": {
-              "title": "",
-              "description": "",
-              "heading_text_align": "text-left",
-              "column_reverse": false,
-              "box_shadow": false,
-              "button_title": "",
-              "banner_link": "",
-              "open_link": false,
-              "overlap_top": false,
-              "space_banner": 0,
-              "col": "4"
-            }
           }
         },
         "block_order": [
           "single_link_VRYiRB",
           "81fceee0-ca53-44a4-89ac-51ed3f3907eb",
           "products_kQgYWn",
-          "c4f1d4e1-02cb-41d5-af80-61dcd17a82e9",
-          "76c5199e-dddb-4f58-b371-802da213fda6",
-          "882a36ca-717e-41e8-878f-4028268a7197",
-          "10d68d71-2b8e-43b2-b14f-49c7da236e2d",
-          "20ad44f0-ea33-4491-8fd2-8c87af447bf2",
-          "4f39245a-f834-4bfd-b0ba-e39b59ef6066"
+          "c4f1d4e1-02cb-41d5-af80-61dcd17a82e9"
         ],
         "settings": {
           "m_animation": "up_to_down",
