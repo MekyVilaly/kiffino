@@ -246,32 +246,6 @@
         "video_full_screen": false
       }
     },
-    "b067dc21-eee2-4801-b57e-bd24d351ea78": {
-      "type": "product-single",
-      "settings": {
-        "heading": "LIMITED EDITION",
-        "description": "<p>Here’s some of our most popular products people are in love with.</p>",
-        "text_alignment": "text-center",
-        "container": "container-fluid",
-        "bg_color": "",
-        "single_product": "",
-        "column_gap": 30,
-        "show_review": true,
-        "show_short_description": false,
-        "show_vendor": true,
-        "show_sku": true,
-        "show_type": true,
-        "show_available": true,
-        "show_collection": true,
-        "button_animation": "flash-move",
-        "show_buy_now": true,
-        "show_countdown": true,
-        "countdown_message": "Hurry up! Sale end in:",
-        "padding_top": 0,
-        "padding_bottom": 0,
-        "reset_spacing": false
-      }
-    },
     "21a6964c-2ef9-44f3-acfc-9f63ce6fa037": {
       "type": "banner-with-text",
       "blocks": {
@@ -302,7 +276,7 @@
         "template--16667358200055__21a6964c-2ef9-44f3-acfc-9f63ce6fa037-167288787976dc0a06-1": {
           "type": "text",
           "settings": {
-            "txt_content": "<p>The watch is carefully designed with quality materials, such as the domed sapphire crystal, and the meticulous level of detail - from the dial to the delicate gold hour markers.</p>",
+            "txt_content": "<p>The CYMA Tank'Jumbo' is carefully designed with quality materials, such as the scratch-resistantmineral crystal, andthe meticulous level of detail -fromtherectangular dial to the precise hour markers.</p>",
             "txt_color": "#555555",
             "txt_fs": 14,
             "txt_fw": 500,
@@ -316,7 +290,7 @@
           "settings": {
             "btn_content": "Discover Now",
             "button_type": "primary",
-            "button_link": "",
+            "button_link": "shopify://products/chronograph-silver-watch",
             "button_target": false,
             "b_mt": 1,
             "b_mb": 1
@@ -333,6 +307,8 @@
         "container": "full-width",
         "background_color": "",
         "banner_type": "image",
+        "image": "shopify://shop_images/Vintagewatch2.webp",
+        "image_mobile": "shopify://shop_images/Vintagewatch2.webp",
         "video_options": "local",
         "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
         "link": "",
@@ -475,7 +451,6 @@
     "3a97c319-e1f4-44e9-8f17-2d568f2bacf2",
     "48263d1a-f37b-4715-893a-ac5dfd296a1a",
     "754f4055-ee9f-4366-ae4a-e3c725a7828e",
-    "b067dc21-eee2-4801-b57e-bd24d351ea78",
     "21a6964c-2ef9-44f3-acfc-9f63ce6fa037",
     "2d159cb3-fa47-4a3b-abb2-63db485890cd",
     "978b3ec8-486d-4f4a-9558-b2cbc5044983",
