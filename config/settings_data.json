@@ -327,22 +327,6 @@
               "icon_width_image": 50
             }
           },
-          "81fceee0-ca53-44a4-89ac-51ed3f3907eb": {
-            "type": "menu_item",
-            "settings": {
-              "title": "Shop",
-              "url": "",
-              "open_link": false,
-              "label": "",
-              "icon_font": "",
-              "icon_width_image": 20,
-              "width": "custom",
-              "custom_width": 1200,
-              "background_repeat": "no-repeat",
-              "background_position": "center",
-              "background_size": "auto"
-            }
-          },
           "c4f1d4e1-02cb-41d5-af80-61dcd17a82e9": {
             "type": "menu_item",
             "settings": {
@@ -363,7 +347,6 @@
         "block_order": [
           "single_link_VRYiRB",
           "single_link_pPGHJp",
-          "81fceee0-ca53-44a4-89ac-51ed3f3907eb",
           "c4f1d4e1-02cb-41d5-af80-61dcd17a82e9"
         ],
         "settings": {
