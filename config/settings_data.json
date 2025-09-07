@@ -342,24 +342,6 @@
               "col": "4"
             }
           },
-          "0bd9c491-364c-43fe-b0f1-08aff9ab6378": {
-            "type": "collection",
-            "settings": {
-              "collection": "",
-              "show_count": false,
-              "open_link": false,
-              "col": "3"
-            }
-          },
-          "0e3c97d7-319c-47f8-b5fa-cf20d55ff0c3": {
-            "type": "collection",
-            "settings": {
-              "collection": "",
-              "show_count": false,
-              "open_link": false,
-              "col": "3"
-            }
-          },
           "c4f1d4e1-02cb-41d5-af80-61dcd17a82e9": {
             "type": "menu_item",
             "settings": {
@@ -437,8 +419,6 @@
           "single_link_VRYiRB",
           "81fceee0-ca53-44a4-89ac-51ed3f3907eb",
           "products_kQgYWn",
-          "0bd9c491-364c-43fe-b0f1-08aff9ab6378",
-          "0e3c97d7-319c-47f8-b5fa-cf20d55ff0c3",
           "c4f1d4e1-02cb-41d5-af80-61dcd17a82e9",
           "76c5199e-dddb-4f58-b371-802da213fda6",
           "882a36ca-717e-41e8-878f-4028268a7197",
