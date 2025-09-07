@@ -348,17 +348,6 @@
               "col": "4"
             }
           },
-          "products_kQgYWn": {
-            "type": "products",
-            "disabled": true,
-            "settings": {
-              "title": "Product",
-              "collection": "classic-watches",
-              "limit": 3,
-              "show_item": 1,
-              "col": "4"
-            }
-          },
           "c4f1d4e1-02cb-41d5-af80-61dcd17a82e9": {
             "type": "menu_item",
             "settings": {
@@ -380,7 +369,6 @@
           "single_link_VRYiRB",
           "81fceee0-ca53-44a4-89ac-51ed3f3907eb",
           "banner_p7qGDH",
-          "products_kQgYWn",
           "c4f1d4e1-02cb-41d5-af80-61dcd17a82e9"
         ],
         "settings": {
