@@ -342,12 +342,23 @@
               "background_position": "right center",
               "background_size": "auto 100%"
             }
+          },
+          "products_ey4V4j": {
+            "type": "products",
+            "settings": {
+              "title": "Product",
+              "collection": "smart-watches",
+              "limit": 2,
+              "show_item": 2,
+              "col": "4"
+            }
           }
         },
         "block_order": [
           "single_link_VRYiRB",
           "single_link_pPGHJp",
-          "c4f1d4e1-02cb-41d5-af80-61dcd17a82e9"
+          "c4f1d4e1-02cb-41d5-af80-61dcd17a82e9",
+          "products_ey4V4j"
         ],
         "settings": {
           "m_animation": "up_to_down",
