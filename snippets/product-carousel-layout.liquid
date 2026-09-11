@@ -38,7 +38,7 @@
       {%- for i in (1..limit_products) -%}
         <div class="swiper-slide">
           <div class="bls__product-item">
-            {%- render 'responsive-image' | type: 'product' | cls: 'bls__product-tab-plh' -%}
+            {%- render 'responsive-image', type: 'product', cls: 'bls__product-tab-plh' -%}
             <div class="bls__product-details pt-15">
               <a role="link" aria-disabled="true">{{ 'products.product.product_placeholder' | t }}</a>
               <div>{%- render 'price' -%}</div>
@@ -50,7 +50,7 @@
       {%- for product in collection.products limit: limit_products -%}
         {%- if product.available -%}{%- endif -%}
         <div class="swiper-slide">
-          {%- render 'product-item' | product: product -%}
+          {%- render 'product-item', product: product -%}
         </div>
       {%- endfor -%}
     {%- endif -%}
@@ -62,3 +62,18 @@
     <div class="swiper-pagination show-on-mobile"></div>
   {%- endif -%}
 </div>
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{%- render 'responsive-image' | type: 'product' | cls: 'bls__product-tab-plh'
+    -%}"
+  to: "{%- render 'responsive-image', type: 'product', cls: 'bls__product-tab-plh'
+    -%}"
+  position: 1488..1567
+- from: "{%- render 'product-item' | product: product -%}"
+  to: "{%- render 'product-item', product: product -%}"
+  position: 2027..2074
+{% endcomment %}

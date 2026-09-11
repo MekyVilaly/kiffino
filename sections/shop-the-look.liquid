@@ -134,7 +134,7 @@
                 assign product = block.settings.product
               %}
               <div class="swiper-slide">
-                {%- render 'product-item' | product: product -%}
+                {%- render 'product-item', product: product -%}
               </div>
             {%- endfor -%}
           </div>
@@ -417,3 +417,13 @@
   ]
 }
 {% endschema %}
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{%- render 'product-item' | product: product -%}"
+  to: "{%- render 'product-item', product: product -%}"
+  position: 5577..5624
+{% endcomment %}

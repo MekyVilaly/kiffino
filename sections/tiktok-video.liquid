@@ -104,7 +104,7 @@
                   {%- if block.settings.tiktok_embed_url != blank -%}
                     {{ block.settings.tiktok_embed_url }}
                   {%- else -%}
-                    {%- render 'placeholder-render' | type: product -%}
+                    {%- render 'placeholder-render', type: product -%}
                   {%- endif -%}
                 </div>
               </div>
@@ -131,7 +131,7 @@
                 {%- if block.settings.tiktok_embed_url != blank -%}
                   {{ block.settings.tiktok_embed_url }}
                 {%- else -%}
-                  {%- render 'placeholder-render' | type: product -%}
+                  {%- render 'placeholder-render', type: product -%}
                 {%- endif -%}
               </div>
             </div>
@@ -362,3 +362,16 @@
   ]
 }
 {% endschema %}
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{%- render 'placeholder-render' | type: product -%}"
+  to: "{%- render 'placeholder-render', type: product -%}"
+  position: 3543..3593
+- from: "{%- render 'placeholder-render' | type: product -%}"
+  to: "{%- render 'placeholder-render', type: product -%}"
+  position: 4614..4664
+{% endcomment %}

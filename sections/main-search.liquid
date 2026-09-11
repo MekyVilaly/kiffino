@@ -61,7 +61,7 @@
             {%- for item in search.results limit: results_per_page -%}
               {%- if item.object_type == 'product' -%}
                 <div class="col-lg-3 col-md-4 col-6 bls__product-load">
-                  {%- render 'product-item' | product: item -%}
+                  {%- render 'product-item', product: item -%}
                 </div>
               {%- endif -%}
             {%- endfor -%}
@@ -117,3 +117,13 @@
   ]
 }
 {% endschema %}
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{%- render 'product-item' | product: item -%}"
+  to: "{%- render 'product-item', product: item -%}"
+  position: 3943..3987
+{% endcomment %}

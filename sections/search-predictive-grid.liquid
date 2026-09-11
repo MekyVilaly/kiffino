@@ -36,11 +36,11 @@
           <div id="search-results-list" class="search-results-list">
             {%- if predictive_search_type == 'search_suggest' -%}
               {%- for product in results -%}
-                {%- render 'product-item' | product: product -%}
+                {%- render 'product-item', product: product -%}
               {%- endfor -%}
             {%- else -%}
               {%- for product in results limit: 6 -%}
-                {%- render 'product-item' | product: product -%}
+                {%- render 'product-item', product: product -%}
               {%- endfor -%}
             {%- endif -%}
           </div>
@@ -69,3 +69,16 @@
     {%- endif -%}
   </div>
 {%- endif -%}
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{%- render 'product-item' | product: product -%}"
+  to: "{%- render 'product-item', product: product -%}"
+  position: 1521..1568
+- from: "{%- render 'product-item' | product: product -%}"
+  to: "{%- render 'product-item', product: product -%}"
+  position: 1693..1740
+{% endcomment %}

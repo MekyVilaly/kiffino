@@ -58,7 +58,7 @@
               class="bls__product-item">
               <div
                 class="bls__product-image mb-15">
-                {%- render 'responsive-image' | type: 'product' | cls: 'bls__product-grid-plh' -%}
+                {%- render 'responsive-image', type: 'product', cls: 'bls__product-grid-plh' -%}
               </div>
               <div
                 class="bls__product-details">
@@ -107,7 +107,7 @@
         {%- for product in collection.products -%}
           <div
             class="col-md-4 col-6 bls__product-load">
-            {%- render 'product-item' | product: product -%}
+            {%- render 'product-item', product: product -%}
           </div>
         {%- endfor -%}
       </div>
@@ -172,7 +172,7 @@
             class="bls__product-item">
             <div
               class="bls__product-image mb-15">
-              {%- render 'responsive-image' | type: 'product' | cls: 'bls__product-grid-plh' -%}
+              {%- render 'responsive-image', type: 'product', cls: 'bls__product-grid-plh' -%}
             </div>
             <div
               class="bls__product-details">
@@ -205,9 +205,32 @@
       {%- for product in collection.products limit: limit_products-%}
         <div
           class="col-md-4 col-6 bls__product-load">
-          {%- render 'product-item' | product: product -%}
+          {%- render 'product-item', product: product -%}
         </div>
       {%- endfor -%}
     </div>
   {%- endif -%}
 {%- endif -%}
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{%- render 'responsive-image' | type: 'product' | cls: 'bls__product-grid-plh'
+    -%}"
+  to: "{%- render 'responsive-image', type: 'product', cls: 'bls__product-grid-plh'
+    -%}"
+  position: 1772..1852
+- from: "{%- render 'product-item' | product: product -%}"
+  to: "{%- render 'product-item', product: product -%}"
+  position: 3608..3655
+- from: "{%- render 'responsive-image' | type: 'product' | cls: 'bls__product-grid-plh'
+    -%}"
+  to: "{%- render 'responsive-image', type: 'product', cls: 'bls__product-grid-plh'
+    -%}"
+  position: 5896..5976
+- from: "{%- render 'product-item' | product: product -%}"
+  to: "{%- render 'product-item', product: product -%}"
+  position: 7111..7158
+{% endcomment %}
